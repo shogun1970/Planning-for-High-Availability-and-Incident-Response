@@ -5,6 +5,7 @@ us-east-2:
   us-east-2a, 
   us-east-2b, 
   us-east-2c
+
 us-west-1:
   us-west-1a,
   us-west-1c
