@@ -26,7 +26,7 @@ Relational Database Server (RDS)
 ### Table 1.1 Summary
 | Asset      | Purpose           | Size                                                                   | Qty                                                             | DR                                                                                                           |
 |------------|-------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| EC2 Instance | Ubuntu Web Server | t3.micro  | 3 nodes | deployed to DR |
+| EC2 Instance | Ubuntu Web Server | t3.micro  | 3 nodes | deployed to DR Primary/Secondary|
 | EKS on EC2 | EKS cluster Prometheus and Grafana | t3.medium  | 3 nodes | deployed to DR Primary/Secondary |
 | RDS Cluster | Aurora MySQL | db.t2.small | 2 instance | deployed to DR Primary/Secondary |
 
@@ -40,9 +40,9 @@ RDS cluster - Database Cluster
 
 ## DR Plan
 ### Pre-Steps:
-Create a separate Zone1 (primary) and ZOne2 (secondary) repository for IaC (terraform)
+Create a separate Zone1 (primary) and Zone2 (secondary) repository for IaC (terraform)
 
-Insure terraform config files are pointing to 2 different availability Zone
+Insure terraform config files are pointing to 2 different availability zones
 
 Deploy Application on Zone1 and verify application is working as advertised
 
@@ -58,4 +58,8 @@ Ensure Database full backup and incremental backup are scheduled
 
 
 ## Steps:
-Failover steps:
+Database Failover steps:
+
+Sync Database (data from backups if needed)
+
+Point dns to Secondary DB
