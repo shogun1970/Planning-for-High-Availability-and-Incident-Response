@@ -50,28 +50,35 @@ Ubuntu Web Server - application web server s3.micro - virtual machine
 
 App Server - application vm 23.medium - EKS cluster - kubernetes cluster running monitoring Prometheus and Grafana
 
-RDS cluster - Database Cluster
+RDS cluster - Database Cluster - Aurora MSSQL database
 
-S3 buckets - storage buckets
+S3 buckets - storage buckets - used to store application, databases, etc.
+
+Security Groups - controls network access to AWS resource (acts as a vitrual firewall)
+
+Load Balancer - distributes/routes traffic to the frontend/backend resources
 
 
 
 
 ## DR Plan
 ### Pre-Steps:
-Create a separate Zone1 (primary) and Zone2 (secondary) repository for IaC (terraform)
+
+Use terraform to help automate resource provisioning in AWS
+
+Create a separate directories Zone1 (primary) and Zone2 (secondary) repository for IaC (using terraform )
 
 Insure terraform config files are pointing to 2 different availability zones
 
-Deploy Application on Zone1 and verify application is working as advertised
+Build infrastructure in region 1 and verify application is working as advertised (in Zone1, terraform init and terraform apply)
 
-Deploy Application on Zone2 and verify application is wokring as advertised
+Buid infrastructure in Zone2 and verify application is wokring as advertised (in Zone2, terrform init and terrafome apply)
 
-Deploy Primary Database on Zone1
+Deploy Primary Database on Region 1
 
-Deploy Secondary Database on Zone 2
+Deploy Secondary Database on Region 1
 
-Replicate database on Zone2
+Create Backups/Snapshots of database for backup and recovery
 
 Ensure Database full backup and incremental backup are scheduled
 
@@ -79,6 +86,9 @@ Ensure Database full backup and incremental backup are scheduled
 ## Steps:
 Database Failover steps:
 
-Sync Database (data from backups if needed)
+Using AwS Console Select RDS and select appropriate region
 
-Point dns to Secondary DB
+Click on writer intance-1 select actions, then failover 
+
+also possible to use the command line and invoke API's to initiate failver
+
