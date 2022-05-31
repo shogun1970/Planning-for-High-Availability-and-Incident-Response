@@ -1,9 +1,16 @@
 # Infrastructure
 
 ## AWS Zones
-Identify your zones here
-
+us-east-2:
+  us-east-2a
+  us-east-2b
+  us-east-2c
+us-west-1:
+  us-west-1a
+  us-west-1c
 ## Servers and Clusters
+
+
 
 ### Table 1.1 Summary
 | Asset      | Purpose           | Size                                                                   | Qty                                                             | DR                                                                                                           |
