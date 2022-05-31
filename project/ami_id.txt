@@ -1,14 +1,11 @@
-aws ec2 create-restore-image-task --object-key ami-0ec6fdfb365e5fc00.bin --bucket udacity-srend --name "udacity-geburns"
+$ aws ec2 create-restore-image-task --object-key ami-0ec6fdfb365e5fc00.bin --bucket udacity-srend --name "udacity-geburns-p2"
 {
-    "ImageId": "ami-006dcf9950289f443"
+    "ImageId": "ami-04564f70e52980a1b"
 }
-
-aws ec2 copy-image --source-image-id ami-006dcf9950289f443 --source-region us-east-1 --region us-east-2 --name "udacity-geburns"
+$ aws ec2 copy-image --source-image-id ami-04564f70e52980a1b --source-region us-east-1 --region us-east-2 --name "udacity-geburns-p2"
 {
-    "ImageId": "ami-0bb4b16aaee570886"
+    "ImageId": "ami-0e27203440437ebe4"
 }
-
-aws ec2 copy-image --source-image-id ami-006dcf9950289f443 --source-region us-east-1 --region us-west-1 --name "udacity-geburns"
+$ aws ec2 copy-image --source-image-id ami-04564f70e52980a1b --source-region us-east-1 --region us-west-1 --name "udacity-geburns-p2"
 {
-    "ImageId": "ami-040306d2ed74fd151"
-}
+    "ImageId": "ami-0613898e12b34d05a"
