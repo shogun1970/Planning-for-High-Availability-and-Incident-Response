@@ -28,17 +28,33 @@ Relational Database Server (RDS)
 |------------|-------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | udacity-tf-geburns | storage | s3  | 1 bucket | us-east-2 |
 | udacity-tf-geburns-west | storage | s3  | 1 bucket | us-west-1 |
-| EC2 Instance | Ubuntu Web Server | t3.micro  | 3 nodes | deployed to DR Primary/Secondary|
-| EKS on EC2 | EKS cluster Prometheus and Grafana | t3.medium  | 3 nodes | deployed to DR Primary/Secondary |
-| RDS Cluster | Aurora MySQL | db.t2.small | 2 instance | us-east-2, us-west-1|
-| RDS Cluster | Aurora MySQL | db.t2.small | 2 instance | deployed to DR Primary/Secondary |
+| EC2 Instance | Ubuntu Web Server | t3.micro  | 3 nodes | us-east-2 |
+| EKS on EC2 | EKS cluster Prometheus and Grafana | t3.medium  | 3 nodes | us-east-2 |
+| RDS Cluster | Aurora MySQL | db.t2.small | primary | us-east-2 |
+| RDS Cluster | Aurora MySQL | db.t2.small | secondary | us-west-1 |
+| Load Balancer | API Load Balancer  | ALB | global | us-east-2,us-west-1 |
+| udacity | Key Pair  | certificate| udacity.pem | us-east-2 |
+| udacity | Key Pair  | certificate| udacity.pem | us-west-1 |
+| -| Security Group | network | default  | us-east-2 |
+| udacity | Security Group  | tf managed | SG-eks-cluster | us-east-2 |
+| ec2_sg| Security Group  | tf_managed | ec2_sg | us-east-2 |
+| eks-cluster-sg-udacity-cluster-XXXXXXXXX | Secutiry Group | network| udacity.pem | us-east-2 |
+| udacity-project-us-east-2a | IP address  | network| public IP | us-east-2 |
+| udacity-geburns | ami  | EC2 AMI | Linux image | us-east-2 |
+| - | Snapshot  | image snapshot | 8GB| us-east-2 |
+
+
 
 ### Descriptions
-Ubuntu Web Server - application web server
+Ubuntu Web Server - application web server s3.micro - virtual machine
 
-EKS cluster - kubernetes cluster running monitoring Prometheus and Grafana
+App Server - application vm 23.medium - EKS cluster - kubernetes cluster running monitoring Prometheus and Grafana
 
 RDS cluster - Database Cluster
+
+S3 buckets - storage buckets
+
+
 
 
 ## DR Plan
