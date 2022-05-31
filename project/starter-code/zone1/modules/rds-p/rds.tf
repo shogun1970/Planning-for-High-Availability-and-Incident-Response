@@ -1,14 +1,14 @@
-# resource "aws_db_instance" "default" {
-#   allocated_storage    = 10
-#   engine               = "mysql"
-#   engine_version       = "5.7"
-#   instance_class       = "db.t3.micro"
-#   username             = "udacity"
-#   password             = "MyUdacityPassword"
-#   parameter_group_name = "default.mysql5.7"
-#   multi-az             = true
-#   skip_final_snapshot  = true
-# }
+resource "aws_db_instance" "default" {
+  allocated_storage    = 10
+  engine               = "mysql"
+  engine_version       = "5.7"
+  instance_class       = "db.t3.micro"
+  username             = "udacity"
+  password             = "MyUdacityPassword"
+  parameter_group_name = "default.mysql5.7"
+  multi-az             = true
+  skip_final_snapshot  = true
+}
 
 
 resource "aws_rds_cluster_parameter_group" "cluster_pg" {
@@ -46,6 +46,7 @@ resource "aws_rds_cluster" "udacity_cluster" {
   engine_version           = "5.6.mysql_aurora.1.19.1" 
   skip_final_snapshot      = true
   storage_encrypted        = false
+  backup_retention_period  = 5
   depends_on = [aws_rds_cluster_parameter_group.cluster_pg]
 }
 
