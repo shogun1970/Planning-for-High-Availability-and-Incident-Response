@@ -26,8 +26,11 @@ Relational Database Server (RDS)
 ### Table 1.1 Summary
 | Asset      | Purpose           | Size                                                                   | Qty                                                             | DR                                                                                                           |
 |------------|-------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| udacity-tf-geburns | storage | s3  | 1 bucket | us-east-2 |
+| udacity-tf-geburns-west | storage | s3  | 1 bucket | us-west-1 |
 | EC2 Instance | Ubuntu Web Server | t3.micro  | 3 nodes | deployed to DR Primary/Secondary|
 | EKS on EC2 | EKS cluster Prometheus and Grafana | t3.medium  | 3 nodes | deployed to DR Primary/Secondary |
+| RDS Cluster | Aurora MySQL | db.t2.small | 2 instance | us-east-2, us-west-1|
 | RDS Cluster | Aurora MySQL | db.t2.small | 2 instance | deployed to DR Primary/Secondary |
 
 ### Descriptions
