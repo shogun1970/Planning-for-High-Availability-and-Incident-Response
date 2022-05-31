@@ -16,26 +16,26 @@ us-west-1:
     us-west-1c
   
 ## Servers and Clusters
-Web Server
+Web Server (EC2)
 
-Kubernetes Cluster
+Monitoring Kubernetes Cluster (EKS)
 
-Database Server
+Relational Database Server (RDS)
 
 
 ### Table 1.1 Summary
 | Asset      | Purpose           | Size                                                                   | Qty                                                             | DR                                                                                                           |
 |------------|-------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| EC2 Instance | Ubuntu Web Server | AWS size eg. t3.micro  | 3 nodes | deployed to DR |
-| EC2 Instance | EKS cluster | AWS size eg. t3.medium  | 3 nodes | deployed to DR |
-| Load Balancer | Grafana Load Balancer | Network VPC  | 2 instance | deployed to DR |
+| EC2 Instance | Ubuntu Web Server | t3.micro  | 3 nodes | deployed to DR |
+| EKS on EC2 | EKS cluster Prometheus and Grafana | t3.medium  | 3 nodes | deployed to DR Primary/Secondary |
+| RDS Cluster | Aurora MySQL | db.t2.small | 2 instance | deployed to DR Primary/Secondary |
 
 ### Descriptions
 Ubuntu Web Server - application web server
 
 EKS cluster - kubernetes cluster running monitoring Prometheus and Grafana
 
-Load Balancer - serving the kubernetes cluster for Grafana UI
+RDS cluster - Database Cluster
 
 
 ## DR Plan
