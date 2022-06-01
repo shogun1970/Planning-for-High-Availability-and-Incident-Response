@@ -1,4 +1,4 @@
-# DashboardAPI Service
+# Dashboard SLO/SLI for API Service
 
 | Category     | SLI      | SLO                                                                | Query                                       |
 |--------------|----------|--------------------------------------------------------------------|---------------------------------------------|
@@ -8,9 +8,17 @@
 | Throughput   |   successful request per minute 5 or greater  | 5 RPS indicates the application is functioning | sum(rate(apiserver_request_total{job="apiserver",code=~"2.."}[5m])) |
 
 
-# Other examples of SLO's and SLI's
+# Other examples of SLO's and SLI's for Web Apps
 
 | Category     | SLI      | SLO                                                                |
 |--------------|----------|--------------------------------------------------------------------|
-| Availability |  successful HTTP requests per minute | 99% of orders complete without errors
-                                                        Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Latency |  latency of a backend web server response |99% of requests complete within 50ms. Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
