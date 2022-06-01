@@ -68,8 +68,8 @@ Load Balancer - distributes/routes traffic to the frontend/backend resources
   - Point your DNS to your secondary region
   - This can be done with a name provider like Amazon route 53
   - Failover your database replication instances to another region
-  - Manually force the secondary region to become primary at the database level, or
-  - Automatically failover the database by health checks
+    - Manually force the secondary region to become primary at the database level, or
+    - Automatically failover the database by health checks
 
 ## DR Plan
   
