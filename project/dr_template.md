@@ -58,8 +58,10 @@ Security Groups - controls network access to AWS resource (acts as a vitrual fir
 
 Load Balancer - distributes/routes traffic to the frontend/backend resources
 
-## DR Plan  (per Lesson)
-
+## DR Plan
+  
+  #### Per Lesson
+    
 ### Pre-Steps:
 Ensure the infrastructure is set up and working in the DR site.
 
@@ -69,7 +71,8 @@ Ensure the infrastructure is set up and working in the DR site.
 
 
 ## DR Plan 
-    As it pertains to the project with additional details
+  #### As it pertains to the project with additional details
+  
 ### Pre-Steps:
   - Pre step is generally completed before DR
   - Make sure configuration is the same for both regions
