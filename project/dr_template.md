@@ -63,8 +63,10 @@ Load Balancer - distributes/routes traffic to the frontend/backend resources
 
 ## DR Plan
 ### Pre-Steps:
-
-Use terraform to help automate resource provisioning in AWS
+  - Pre step is generally completed before DR
+  - Make sure configuration is the same for both regions
+  
+Use IaC (terraform) to help automate resource provisioning in AWS
 
 Create a separate directories Zone1 (primary) and Zone2 (secondary) repository for IaC (using terraform )
 
