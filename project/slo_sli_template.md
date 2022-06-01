@@ -10,7 +10,7 @@
 
 # Other examples of SLO's and SLI's for Web Apps
 
-| Category     | SLI      | SLO's                                                                |
+| Category     | SLI      | SLO's                                                              |   |
 |--------------|----------|--------------------------------------------------------------------|
 | Availability Error Budget |  successful HTTP requests per minute | 99% of orders complete without errors.| Only 1% of traffic results in an error or errors |
 | Latency |  latency of a backend web server response |99% of requests complete within 50ms. | Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
