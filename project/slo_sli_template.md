@@ -1,4 +1,4 @@
-# API Service
+# DashboardAPI Service
 
 | Category     | SLI      | SLO                                                                | Query                                       |
 |--------------|----------|--------------------------------------------------------------------|---------------------------------------------|
@@ -6,3 +6,11 @@
 | Latency| 90% of under 100ms | 90% of requests below 100ms | histogram_quantile(0.90,sum(rate(apiserver_request_duration_seconds_bucket{job="apiserver"}[5m])) by (le, verb)) | 
 | Error Budget | successful request > 80%  | Error budget is defined at 20%.|1 - ((1 - (sum(increase(apiserver_request_total{job="apiserver", code="200"}[5m])) by (verb)) / sum(increase(apiserver_request_total{job="apiserver"}[5m])) by (verb)) / (1 - .80)) |
 | Throughput   |   successful request per minute 5 or greater  | 5 RPS indicates the application is functioning | sum(rate(apiserver_request_total{job="apiserver",code=~"2.."}[5m])) |
+
+
+# Other examples of SLO's and SLI's
+
+| Category     | SLI      | SLO                                                                |
+|--------------|----------|--------------------------------------------------------------------|
+| Availability |  successful HTTP requests per minute | 99% of orders complete without errors
+                                                        Only 1% of traffic results in an error or errors |
