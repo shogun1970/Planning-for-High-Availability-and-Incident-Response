@@ -1,6 +1,6 @@
 terraform {
    backend "s3" {
-     bucket = "udacity-tf-geburns-p2-west"
+     bucket = "udacity-tf-geburns-west"
      key    = "terraform/terraform.tfstate"
      region = "us-west-1"
    }
