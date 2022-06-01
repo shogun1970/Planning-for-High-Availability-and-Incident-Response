@@ -10,15 +10,18 @@
 
 # Other examples of SLO's and SLI's for Web Apps
 
-| Category     | SLI      | SLO                                                                |
+| Category     | SLI      | SLO's                                                                |
 |--------------|----------|--------------------------------------------------------------------|
-| Availability Error Budget |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
-| Latency |  latency of a backend web server response |99% of requests complete within 50ms. Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
+| Availability Error Budget |  successful HTTP requests per minute | 99% of orders complete without errors.| Only 1% of traffic results in an error or errors |
+| Latency |  latency of a backend web server response |99% of requests complete within 50ms. | Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
 | Availability Error Budget |  unsuccessful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
-| Latency Througput |  latency of frontend response | 99% of requests complete within 50ms. Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
-| Availability Error Budget |  API response codes | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
-| Latency Throughput |  database operations per second/minute | 5 orders per minute. Be able to sustain 500 visitors per minute while keeping the latency below 50ms|
-| Throughput |  indexing rate | 5 orders per minute.  99% of requests complete within 50ms.  Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
-| Throughput Error Budget |  percentile bucket of requests per minute | 99% of requests complete within 50ms. 99% of orders complete without errors |
-| Throughput|  session creation time | 99% of requests complete within 50ms. Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
-| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Latency Througput |  latency of frontend response | 99% of requests complete within 50ms. | Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
+| Availability Error Budget |  API response codes | 99% of orders complete without errors. | Only 1% of traffic results in an error or errors |
+| Latency Throughput |  database operations per second/minute | 5 orders per minute.| Be able to sustain 500 visitors per minute while keeping the latency below 50ms|
+| Throughput |  indexing rate | 5 orders per minute.  99% of requests complete within 50ms. |  Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
+| Throughput Error Budget |  percentile bucket of requests per minute | 99% of requests complete within 50ms. | 99% of orders complete without errors |
+| Throughput|  session creation time | 99% of requests complete within 50ms. | Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
+| Availability |  query return time | 5 orders per minute | 90% of requests are read from the cache layer |
+| Availability |  query return time | 5 orders per minute | 90% of requests are read from the cache layer |
+| Availability |  query return time | 5 orders per minute | 90% of requests are read from the cache layer |
+| Availability |  query return time | 5 orders per minute | 90% of requests are read from the cache layer |
