@@ -24,4 +24,4 @@
 | Throughput |  the number of requests read from cache |90% of requests are read from the cache layer | 99% of requests complete within 50ms. 5 orders per minute |
 | Throughput |  the total number of requests | 5 orders per minute | 99% of requests complete within 50ms|99% of orders complete without errors. Be able to sustain 500 visitors per minute while keeping the latency below 50ms|
 |Error Budget |  correctness probe| 5 orders per minute | 90% of requests are read from the cache layer |
-| Availability |  query return time | 99% of orders do not contain an error | | |
+| Error  Budget |  query return time | 99% of orders do not contain an error | | |
