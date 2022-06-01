@@ -15,9 +15,9 @@
 | Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
 | Latency |  latency of a backend web server response |99% of requests complete within 50ms. Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
 | Availability |  unsuccessful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
-| Latency |  latency of frontend response | 99% of requests complete within 50ms Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
-| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
-| Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Latency Througput |  latency of frontend response | 99% of requests complete within 50ms. Be able to sustain 500 visitors per minute while keeping the latency below 50ms |
+| Error Budget |  API response codes | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
+| Latency Throughput |  database operations per second/minute | 5 orders per minute. Be able to sustain 500 visitors per minute while keeping the latency below 50ms|
 | Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
 | Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
 | Availability |  successful HTTP requests per minute | 99% of orders complete without errors. Only 1% of traffic results in an error or errors |
