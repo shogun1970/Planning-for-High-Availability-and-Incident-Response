@@ -72,7 +72,9 @@ Insure terraform config files are pointing to 2 different availability zones
 
 Build infrastructure in region 1 and verify application is working as advertised (in Zone1, terraform init and terraform apply)
 
-Buid infrastructure in Zone2 and verify application is wokring as advertised (in Zone2, terrform init and terrafome apply)
+Ensure both sides/zone are the same (minimize configuraton drift)
+
+Buid infrastructure in Zone2 and verify application is wokring as advertised (in Zone2, terrform init and terrafome apply)  
 
 Deploy Primary Database on Region 1
 
@@ -86,9 +88,13 @@ Ensure Database full backup and incremental backup are scheduled
 ## Steps:
 Database Failover steps:
 
-Using AwS Console Select RDS and select appropriate region
+Point DNS to Secondary 
 
-Click on writer intance-1 select actions, then failover 
+Failover database replication instance to another region (manually to become primary or automatically by using health checks)
 
-also possible to use the command line and invoke API's to initiate failver
+  - Using AwS Console Select RDS and select appropriate region
+
+  - Click on writer intance-1 select actions, then failover 
+
+  - Also possible to use the command line and invoke API's to initiate failver
 
