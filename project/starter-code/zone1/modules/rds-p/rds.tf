@@ -6,7 +6,7 @@ resource "aws_db_instance" "default" {
   username             = "udacity"
   password             = "MyUdacityPassword"
   parameter_group_name = "default.mysql5.7"
-  multi-az             = true
+  multi_az             = true
   skip_final_snapshot  = true
 }
 
