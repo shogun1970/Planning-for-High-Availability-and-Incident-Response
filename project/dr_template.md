@@ -58,10 +58,18 @@ Security Groups - controls network access to AWS resource (acts as a vitrual fir
 
 Load Balancer - distributes/routes traffic to the frontend/backend resources
 
+## DR Plan  (per Lesson)
+
+### Pre-Steps:
+Ensure the infrastructure is set up and working in the DR site.
+
+### Steps:
+1. Create a cloud load balancer and point DNS to the load balancer. This way you can have multiple instances behind 1 IP in a region. During a failover scenario, you would fail over the single DNS entry at your DNS provider to point to the DR site. This is much more intelligent than pointing to a single instance of a web server.
+2. Have a replicated database and perform a failover on the database. While a backup is good and necessary, it is time-consuming to restore from backup. In this DR step, you would have already configured replication and would perform the database failover. Ideally, your application would be using a generic CNAME DNS record and would just connect to the DR instance of the database.
 
 
-
-## DR Plan
+## DR Plan 
+    As it pertains to the project with additional details
 ### Pre-Steps:
   - Pre step is generally completed before DR
   - Make sure configuration is the same for both regions
