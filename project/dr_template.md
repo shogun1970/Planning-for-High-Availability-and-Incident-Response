@@ -58,9 +58,22 @@ Security Groups - controls network access to AWS resource (acts as a vitrual fir
 
 Load Balancer - distributes/routes traffic to the frontend/backend resources
 
+## DR Plan 
+  #### Per Lesson
+
+### Pre-steps
+  - Ensure both sites are configured the same
+  - You can use infrastructure as code (IaC) to do this (we'll talk about this more later)
+### Steps:
+  - Point your DNS to your secondary region
+  - This can be done with a name provider like Amazon route 53
+  - Failover your database replication instances to another region
+  - Manually force the secondary region to become primary at the database level, or
+  - Automatically failover the database by health checks
+
 ## DR Plan
   
-  #### Per Lesson
+  #### Per quiz solution 
     
 ### Pre-Steps:
 Ensure the infrastructure is set up and working in the DR site.
